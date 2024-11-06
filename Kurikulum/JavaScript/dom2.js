@@ -5,14 +5,20 @@ const popup = document.getElementById("popup");
 
 function handleSubmit() {
   if (firstNum.value === "" || secNum.value === "") {
-    popup.innerText = "lengkapi angka terlebih";
+    popup.innerHTML =
+      "Masukan angka terlebih dahulu!<button id='closePopup'>OK</button>";
+    popup.classList.add("active");
+    document.getElementById("closePopup").addEventListener("click", closePopup);
   } else {
     const num1 = parseFloat(firstNum.value);
     const num2 = parseFloat(secNum.value);
 
     if (num2 === 0) {
-      popup.innerText = "Error: Pembagian dengan 0 tidak diperbolehkan";
-      return;
+      popup.innerHTML = `<p>Error: Pembagian dengan ${num2} tidak diperbolehkan</p> <button id='closePopup'>OK</button>`;
+      popup.classList.add("active");
+      document
+        .getElementById("closePopup")
+        .addEventListener("click", closePopup);
     }
     const result = num1 / num2;
 
