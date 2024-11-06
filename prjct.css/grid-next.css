@@ -1,0 +1,24 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 60%;
+  margin: 50px auto;
+  display: grid;
+  /* grid-area: "left left" "center center" "right right"; */
+  grid-template-columns: 100px 35% 100px;
+  grid-template-rows: 100px 100px 50%;
+}
+
+.item {
+  background-color: aqua;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.item:nth-child(even) {
+  background-color: palevioletred;
+}

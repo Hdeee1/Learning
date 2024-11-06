@@ -1,0 +1,55 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.container {
+  border: 5px solid black;
+  padding: 5px;
+  margin: 10px;
+  font-family: sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+/* wajib saat menggunakan float */
+.content::after {
+  display: block;
+  content: "";
+  clear: both;
+}
+
+header {
+  background-color: aqua;
+  padding: 60px 0;
+}
+
+.sidebar {
+  float: left;
+  width: 40%;
+}
+
+aside {
+  background-color: yellow;
+  padding: 80px 0;
+}
+
+nav {
+  background-color: lightgreen;
+  padding: 150px 0;
+}
+
+main {
+  background-color: palevioletred;
+  padding: 239px 0;
+  box-sizing: border-box;
+  float: right;
+  width: 60%;
+}
+
+footer {
+  background-color: gray;
+  padding: 60px 0;
+}
